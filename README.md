@@ -11,7 +11,8 @@ PS: 低配版Adapter，不带回收机制
 继承BaseGridAdapter类，实现`onCreateViewHolder`和`onBindViewHolder`方法，并实现一些表格相关的方法。
 
 #### BaseGridAdapter方法简介
-(以下斜体均为抽象方法)
+斜体均为抽象方法
+
 |方法|简介|
 |:-:|:-:|
 |*VH onCreateViewHolder(ViewGroup parent, int viewType)*|和RecyclerView的onCreateViewHolder相同|
