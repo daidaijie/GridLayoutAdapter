@@ -1,17 +1,17 @@
 # GridLayoutAdapter
-An adapter for Gridlayout
+**An adapter for Gridlayout**
 
 #### 使用注意
 PS: 低配版Adapter，不带回收机制    
 仿RecyclerView.Adpater配置而成，主要用于多行多列表格的绘制。    
 目前只实现了notifyDataSetChanged()功能
 
-#### 使用方法
+#### Adapter的使用
 和RecyclerView差不多
 继承BaseGridAdapter类，实现`onCreateViewHolder`和`onBindViewHolder`方法，并实现一些表格相关的方法。
 
-BaseGridAdapter方法简介(以下斜体均为抽象方法)
-
+#### BaseGridAdapter方法简介
+(以下斜体均为抽象方法)
 |方法|简介|
 |:-:|:-:|
 |*VH onCreateViewHolder(ViewGroup parent, int viewType)*|和RecyclerView的onCreateViewHolder相同|
@@ -25,10 +25,12 @@ BaseGridAdapter方法简介(以下斜体均为抽象方法)
 |getGridWidth()|获取单元格长度，默认为0。(为0时则默认每列平分表格宽度)|
 
 
-#### Adapter和GridLayout关联 
-使用`GridAdapter.attachTo(GridLayout);`即可关联Adapter和GridLayout，实现布局效果
+#### 关联Adapter和GridLayout 
+`GridAdapter.attachTo(GridLayout)`     
+即可关联Adapter和GridLayout，通过GridAdapter给GridLayout布局子Item
 
-数据集更新     
+#### 数据集更新     
 `
-GridAdapter.notifyDataSetChanged();
-`
+GridAdapter.notifyDataSetChanged()
+`     
+即可重新使用GridAdapter给GridLayout布局子Item。
